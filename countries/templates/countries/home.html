@@ -1,0 +1,13 @@
+{% extends "countries/base.html" %}
+
+{% block title%}Home{% endblock %}
+
+{% block content %}
+	<h1>World</h1>
+
+	{% for country in countries %}
+		{% include "countries/country.html" %}
+
+	{% endfor %}
+	{{request.user}}
+{% endblock %}
