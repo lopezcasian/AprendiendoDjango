@@ -5,12 +5,12 @@ class ContinentsView(TemplateView):
 	template_name = 'continents/continents.html'
 
 	def get_context_data(self, *args, **kwargs):
-		america = {'nombre':'américa', 'traduccion':'america', 'color':'#000000'}
-		antartida = {'nombre':'antártida', 'traduccion':'antarctica', 'color':'#FFFF00'}
-		europa = {'nombre':'europa', 'traduccion':'europe', 'color':'#F1D142'}
-		africa = {'nombre':'africa', 'traduccion':'africa', 'color':'#F04261'}
-		asia = {'nombre':'asia', 'traduccion':'asia', 'color':'#EE65EE'}
-		oceania = {'nombre':'oceania', 'traduccion':'oceania', 'color':'#EE65DD'}
+		america = {'name':'américa', 'translation':'america', 'color':'#000000'}
+		antartida = {'name':'antártida', 'translation':'antarctica', 'color':'#FFFF00'}
+		europa = {'name':'europa', 'translation':'europe', 'color':'#F1D142'}
+		africa = {'name':'africa', 'translation':'africa', 'color':'#F04261'}
+		asia = {'name':'asia', 'translation':'asia', 'color':'#EE65EE'}
+		oceania = {'name':'oceania', 'translation':'oceania', 'color':'#EE65DD'}
 
 		continents = [
 			america,

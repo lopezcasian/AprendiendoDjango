@@ -1,6 +1,7 @@
-<h1>nombre: {{country.nombre|title}}</h1>
-<p>codigo: {{country.codigo}}</p>
-{% if country.nombre == 'colombia' %}
-	<p>yeah: {{country.codigo}}</p>
+<h1>nombre: {{country.name|title}}</h1>
+<p>codigo: {{country.code}}</p>
+{% if country.name == 'colombia' %}
+	<p>yeah: {{country.code}}</p>
 {% endif%}
+<p>Detail_url <a href="{{ country.detail_url}}">Go to detail</a></p>
 <br>

@@ -1,8 +1,6 @@
+from django.urls import reverse
+from countries.models import Country
 
 def countries_data(request):
-	colombia = {'nombre': 'colombia', 'codigo':'CO'}
-	usa = {'nombre': 'estados unidos', 'codigo':'USA'}
-	mexico = {'nombre':'mexico', 'codigo': 'MX'}
-
-	countries = [colombia, usa, mexico]
+	countries = Country.objects.all()
 	return {'countries':countries}
