@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from countries.views import CountryDetailView, CountryDetailIDView
+from countries.views import (
+	CountryDetailView, 
+	CountryDetailIDView,
+	CountrySearchView
+	)
 
 urlpatterns = [
+    path('search/<query>/', CountrySearchView.as_view(), name="country_search"),
     path('<int:id>/', CountryDetailIDView.as_view(), name="country_id_detail"),
     path('<code>/', CountryDetailView.as_view(), name="country_code_detail")
 ]
