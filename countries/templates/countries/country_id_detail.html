@@ -1,9 +1,6 @@
 {% extends 'countries/base.html' %}
 {% block content %}
 
-{% for country in countries %}
-	{% if country.id == id %}
-		{% include 'countries/country.html'%}
-	{% endif %}
-{% endfor %}
+	{% include 'countries/country.html' with country=object%}
+
 {% endblock %}

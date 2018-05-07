@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404
 from django.views.generic import TemplateView
 from countries.models import Country
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 # Create your views here.
 
@@ -22,13 +23,15 @@ class CountryDetailView(TemplateView):
 		code = kwargs['code']
 		return {'code':code}
 
-class CountryDetailIDView(TemplateView):
+class CountryDetailIDView(DetailView):
 	template_name = "countries/country_id_detail.html"
 
+	model = Country
 
-	def get_context_data(self, *args, **kwargs):
-		code_id = kwargs['id']
-		return {'id':code_id}
+	"""def get_context_data(self, *args, **kwargs):
+		country = get_object_or_404(Country, id=kwargs['id'])
+
+		return {'country':country}"""
 
 class CountrySearchView(ListView):
 	template_name = 'countries/search.html'
