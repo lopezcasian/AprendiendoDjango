@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'countries.apps.CountriesConfig',
     'continents.apps.ContinentsConfig',
+    'people.apps.PeopleConfig',
 
 ]
 
