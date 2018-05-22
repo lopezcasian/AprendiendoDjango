@@ -1,0 +1,11 @@
+{% extends "countries/base.html" %}
+{% block content %}
+
+<form action="." method="POST">
+	{% csrf_token %}
+	{{form}}
+	<input type="submit" name="" value="Register">
+	
+</form>
+
+{% endblock %}

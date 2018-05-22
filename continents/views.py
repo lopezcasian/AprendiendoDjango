@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView
+from continents.models import Continent
 # Create your views here.
-class ContinentsView(TemplateView):
+class ContinentsView(ListView):
 	template_name = 'continents/continents.html'
+	model = Continent
 
-	def get_context_data(self, *args, **kwargs):
+	"""def get_context_data(self, *args, **kwargs):
 		america = {'name':'américa', 'translation':'america', 'color':'#000000'}
 		antartida = {'name':'antártida', 'translation':'antarctica', 'color':'#FFFF00'}
 		europa = {'name':'europa', 'translation':'europe', 'color':'#F1D142'}
@@ -20,4 +22,4 @@ class ContinentsView(TemplateView):
 			antartida
 		]
 
-		return {'continents':continents}
+		return {'continents':continents}"""

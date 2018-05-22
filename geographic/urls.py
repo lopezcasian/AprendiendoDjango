@@ -23,5 +23,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     path('tags/', TagsView.as_view(), name="tags"),
     path('continents/', include("continents.urls", namespace="continents")),
-    path('countries/', include("countries.urls"))
+    path('countries/', include("countries.urls")),
+    path('people/', include("people.urls"))
 ]

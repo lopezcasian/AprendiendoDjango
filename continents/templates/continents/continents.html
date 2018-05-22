@@ -1,7 +1,7 @@
 {% extends "countries/base.html" %}
 {% block content %}
 <h1>continents</h1>
-{% for continent in continents %}
+{% for continent in object_list %}
 	<hr>
 	{% include 'continents/continent.html' %}
 	<hr>
